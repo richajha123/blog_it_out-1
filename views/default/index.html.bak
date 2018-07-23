@@ -1,0 +1,30 @@
+{{extend 'layout.html'}}
+
+<div class="home-full-page-background">
+    <div class="home-top-nav-bar">
+        <button class="home-top-nav-item" onclick="location.href='{{=URL('default', 'index')}}'">
+            Blog It Out
+        </button>
+        <button class="home-top-nav-item">
+            About
+        </button>
+        <button class="home-top-nav-item">
+            Explore
+        </button>
+        <button class="home-top-nav-item">
+            Support
+        </button>
+        <button class="home-top-nav-item" id="home-top-nav-item-signin" onclick="location.href='{{=URL('user', 'login')}}'">
+            Sign In
+        </button>
+    </div>
+
+    <div class="home-center-div">
+        <div>
+            Some Random cool looking Tag line
+        </div>
+        <button id="home-center-get-started" onclick="location.href='{{=URL('user', 'login')}}'">
+            Get Started
+        </button>
+    </div>
+</div>

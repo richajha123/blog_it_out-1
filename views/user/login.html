@@ -1,0 +1,29 @@
+{{extend 'layout.html'}}
+
+<a href="{{=URL('default', 'index')}}">
+    <img src="{{=URL('static','sun_images/bio-logo.jpg')}}" alt="Logo">
+</a>
+
+<div class="user-login-center-div">
+    <div class="user-login-heading">
+        Log In
+    </div>
+    <div class="user-login-sub-heading">
+        New to Blog it out? <a href="{{=URL('signup')}}">Sign Up</a>
+    </div>
+    <div class="user-login-controls">
+        <div class="user-login-options" id="user-login-manual">
+            <div class="user-login-padding-div">
+                {{=form}}
+                * By logging in, you agree to our <a href="">Terms of Use</a> and acknowledge that you read our <a href="">Privacy Policy</a>.
+            </div>
+        </div>
+        <div class="user-login-options" id="user-login-fb-google">
+            <div class="user-login-padding-div">
+                <p>
+                    TODO: Login using facebook and google
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

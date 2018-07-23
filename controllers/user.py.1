@@ -1,0 +1,27 @@
+from passlib.hash import pbkdf2_sha256 as pwd_context
+
+def login():
+    response.title = "Log In | BIO"
+
+    form = SQLFORM.factory(
+        Field('Email', type='string', requires=[IS_NOT_EMPTY(),IS_EMAIL()]),
+        Field('Password', type='password', requires=IS_NOT_EMPTY()),
+        Field('Terms_and_conditions', type='boolean', requires=IS_NOT_EMPTY())
+    ).process()
+
+    if form.accepted:
+        rows = db().select(db.mytable.ALL)
+
+        hash = pwd_context.hash(form.vars.Password)
+        pwd_context.verify(form.vars.Password, hash)
+        
+        form.vars.id = db.person.insert(**dict(email=form.vars.Email, password=hash))
+
+        response.flash = "Welcome to Blog It Out"
+    elif form.errors:
+        response.flash = "Error in form!"
+
+    return locals()
+
+def signup():
+    return locals()

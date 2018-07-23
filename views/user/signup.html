@@ -1,0 +1,28 @@
+{{extend 'layout.html'}}
+
+<a href="{{=URL('default', 'index')}}">
+    <img src="{{=URL('static','sun_images/bio-logo.jpg')}}" alt="Logo">
+</a>
+
+<div class="user-login-center-div">
+    <div class="user-login-heading">
+        Sign Up
+    </div>
+    <div class="user-login-sub-heading">
+        Already have an account? <a href="{{=URL('login')}}">Log In</a>
+    </div>
+    <div class="user-login-controls">
+        <div class="user-login-options" id="user-login-manual">
+            <div class="user-login-padding-div">
+                {{=form}}
+            </div>
+        </div>
+        <div class="user-login-options" id="user-login-fb-google">
+            <div class="user-login-padding-div">
+                <p>
+                    TODO: Sign up using facebook and google
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

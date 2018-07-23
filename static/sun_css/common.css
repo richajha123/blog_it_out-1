@@ -1,0 +1,190 @@
+/*This stylesheet is for common controls*/
+
+/*Home page begins here*/
+
+.home-full-page-background {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+    /*background-color: red;*/
+    background: url('../sun_images/building_1.jpg');
+}
+
+.home-top-nav-bar {
+    /*background-color: gray;*/
+    height: 80px;
+    color: white;
+    transition: background-color 1s, color 0s;
+}
+
+.home-top-nav-bar:hover {
+    background-color: white;
+    color: black;
+}
+
+.home-top-nav-item {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: transparent;
+
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    color: inherit;
+    height: 100%;
+}
+
+.home-top-nav-item:hover {
+    border-top: 3px solid #33E9FF;
+    color: #33E9FF;
+}
+
+#home-top-nav-item-search {
+    position: relative;
+    left: 30%;
+    background: white;
+    height: 30px;
+}
+
+#home-top-nav-item-signin {
+    float: right;
+}
+
+.home-center-div {
+    width: 50%;
+    height: 80%;
+    min-width: 500px;
+    min-height: 500px;
+    background-color: transparent;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+    border: 5px solid white;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2em;
+}
+
+#home-center-tag-line {
+    width: 100%;
+    height: 65%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+#home-center-get-started {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background: white;
+    color: #33E9FF;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+
+    transition: background 1s color 0s;
+}
+
+#home-center-get-started:hover {
+    background: #77BEE2;
+    color: white;
+}
+
+/*Home page ends here*/
+
+/*Login page begins here*/
+
+.user-login-center-div {
+    width: 60%;
+    height: 60%;
+    min-width: 500px;
+    min-height: 500px;
+    /*background-color: red;*/
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.user-login-heading {
+	/*background-color: yellow;*/
+	text-align: center;
+	font-size: 5em;
+}
+
+.user-login-sub-heading {
+	/*background-color: blue;*/
+	text-align: center;
+	font-size: 2em;
+}
+
+/*.user-login-controls {
+	background-color: yellow;
+}*/
+
+.user-login-options {
+	width: 45%;
+	margin: 10px;
+	display: inline-block;
+}
+
+.user-login-padding-div {
+	margin: 50px;
+}
+
+#user-login-manual {
+	border-right: 1px solid grey;
+}
+
+/*Login page ends here*/
+
+/*Common stuff begins here*/
+
+body {
+	font-family: 'Indie Flower', cursive;
+}
+
+a {
+	text-decoration: none;
+	color: #33E9FF;
+}
+
+a:hover {
+	text-decoration: none;
+	color: blue;
+}
+
+/*Common stuff ends here*/
