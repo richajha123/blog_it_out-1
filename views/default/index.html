@@ -14,9 +14,13 @@
         <button class="home-top-nav-item">
             Support
         </button>
-        <button class="home-top-nav-item" id="home-top-nav-item-signin" onclick="location.href='{{=URL('user', 'login')}}'">
-            Sign In
-        </button>
+            <button class="home-top-nav-item" id="home-top-nav-item-signin" onclick="location.href='{{=URL('user', 'login')}}'">
+                {{if session.isLoggedIn:}}
+                    {{=session.email_id}}
+                {{else:}}
+                    Sign In
+                {{pass}}
+            </button>
     </div>
 
     <div class="home-center-div">

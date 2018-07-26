@@ -1,6 +1,8 @@
 # ---- Home index page ----
 def index():
+    #redirect(URL('user', 'login'))
     response.title = T("Home | BIO")
+    session.isLoggedIn = False
     return locals()
 
 # ---- API (example) -----

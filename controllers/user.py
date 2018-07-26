@@ -2,6 +2,7 @@ from passlib.hash import pbkdf2_sha256 as pwd_context
 
 def login():
     response.title = T("Log In | BIO")
+    session.isLoggedIn = False
 
     form = SQLFORM.factory(
         Field('Email', type='string', requires=[IS_NOT_EMPTY(),IS_EMAIL()]),
@@ -18,10 +19,11 @@ def login():
         for row in rows:
             if row.email == email_id:
                 if pwd_context.verify(password, row.password):
-                    session.flash = T("Welcome to Blog It Out")
                     user_found = True
-                    redirect(URL('signup'))
-
+                    session.email_id = email_id
+                    session.flash = T("Welcome "+email_id)
+                    session.isLoggedIn = True
+                    redirect(URL('default','index'))
         if not user_found:
             response.flash = T("Incorrect username or password!")
 
@@ -33,6 +35,7 @@ def login():
 
 def signup():
     response.title = T("Sign up | BIO")
+    session.isLoggedIn = False
 
     form = SQLFORM.factory(
         Field('Email', type='string', requires=[IS_NOT_EMPTY(),IS_EMAIL()]),
@@ -58,8 +61,10 @@ def signup():
 
             if not user_found:
                 form.vars.id = db.person.insert(**dict(email=email_id, password=crypted_password))
-                session.flash = T("Welcome to Blog It Out")
-                redirect(URL('login'))
+                session.email_id = email_id
+                session.flash = T("Welcome "+email_id)
+                session.isLoggedIn = True
+                redirect(URL('default','index'))
 
         else:
             response.flash = T("Passwords don't match!")
